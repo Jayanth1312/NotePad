@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #171717;
+  font-family: "Geist", sans-serif;
+}
+
+.editor {
+  background-color: #171717;
+  min-height: 100vh;
+  margin-left: 352px;
+  transition: margin-left 0.3s cubic-bezier(0.2, 0, 0.1, 1);
+  position: relative;
+}
+
+.editor.sidebar-collapsed {
+  margin-left: 0px;
+}
+
+.editor-wrapper {
+  padding: 24px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toggle-sidebar-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.toggle-sidebar-btn:hover {
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+}
+
+.toggle-sidebar-btn img {
+  background: transparent;
+  transition: transform 0.3s ease;
+}

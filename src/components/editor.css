@@ -1,0 +1,83 @@
+.editor-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 20px 72px;
+}
+
+.editor-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background: transparent;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  min-height: 3.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.editor-content {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  outline: none;
+  border: none;
+  color: #d4d4d4;
+  background: transparent;
+  min-height: calc(100vh - 200px);
+  padding: 0.5rem 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.editor-title[data-empty="true"]::before,
+.editor-content[data-empty="true"]::before {
+  content: attr(data-placeholder);
+  color: #737373;
+  position: absolute;
+  pointer-events: none;
+}
+
+.editor-title:focus,
+.editor-content:focus {
+  outline: none;
+}
+
+.editor-content strong,
+.editor-content b {
+  font-weight: bold;
+  background: transparent;
+  color: inherit;
+}
+
+.editor-content em,
+.editor-content i {
+  font-style: italic;
+  background: transparent;
+  color: inherit;
+}
+
+.editor-content ul {
+  margin: 1em 0;
+  padding-left: 2em;
+  background: transparent;
+  list-style-type: disc;
+  color: inherit;
+}
+
+.editor-content li {
+  margin: 0.5em 0;
+  background: transparent;
+  color: inherit;
+  padding-left: 0.5em;
+}
+
+::selection {
+  background: rgba(100, 100, 100, 0.3);
+  color: #ffffff;
+}
