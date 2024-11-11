@@ -69,7 +69,7 @@ function Editor() {
 
   return (
     <div className="editor-container">
-      <div
+      {/* <div
         ref={titleRef}
         className="editor-title"
         contentEditable
@@ -77,7 +77,7 @@ function Editor() {
         onInput={handleInput(titleRef, "Untitled")}
         data-placeholder="Untitled"
         spellCheck="true"
-      />
+      /> */}
       <div
         ref={contentRef}
         className="editor-content"

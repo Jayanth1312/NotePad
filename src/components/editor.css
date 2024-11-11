@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 48px 24px 20px 72px;
+  padding: 0px 24px 20px 72px;
 }
 
 .editor-title {
@@ -22,7 +22,7 @@
 }
 
 .editor-content {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.6;
   outline: none;
   border: none;

@@ -34,7 +34,7 @@
   background-color: #2b2b2b;
   border-radius: 12px;
   padding: 10px 12px;
-  gap: 4px;
+  gap: 8px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -56,14 +56,14 @@
 .search-input::placeholder {
   color: #737373;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Geist", sans-serif;
 }
 
 .shortcut {
-  background-color: #222222;
   color: #737373;
-  padding: 6px 8px;
+  padding: 6px 10px 6px 0px;
+  background: transparent;
   border-radius: 5px;
   font-weight: 500;
   font-size: 10px;
@@ -93,7 +93,7 @@
   font-weight: normal;
   cursor: pointer;
   padding: 0;
-  gap: 4px;
+  gap: 8px;
 }
 
 .ctrlt {
@@ -105,7 +105,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Updated collapsed states */
 .sidebar.collapsed .search-container,
 .sidebar.collapsed .new-note {
   opacity: 0;
@@ -144,4 +143,49 @@
 .sidebar.collapsed .ctrlt,
 .sidebar.collapsed .new-note-button span {
   transition-delay: 0s;
+}
+
+.files-list {
+  margin-top: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background: transparent;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 12px;
+  margin-bottom: 8px;
+  background-color: #2b2b2b; /* Change background color when selected */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  gap: 8px;
+  border-radius: 12px;
+}
+
+.file-item .filename {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.file-item .cross {
+  background: transparent;
+  padding: 0 8px;
+}
+
+/* .file-item:hover {
+  background-color: #333333;
+} */
+
+.file-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-name {
+  color: #d4d4d4;
+  font-size: 16px;
+  font-weight: 400;
 }

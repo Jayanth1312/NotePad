@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import searchIcon from "../assets/search.svg";
 import plusIcon from "../assets/plus.svg";
+import fileIcon from "../assets/file.svg";
+import deleteIcon from "../assets/delete.svg";
 import "./sidebar.css";
 
-const Sidebar = ({ isCollapsed }) => {
+const Sidebar = ({ isCollapsed, files, onNewNote }) => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -35,7 +37,7 @@ const Sidebar = ({ isCollapsed }) => {
       </div>
 
       <div className="new-note">
-        <button className="new-note-button">
+        <button className="new-note-button" onClick={onNewNote}>
           <img
             src={plusIcon}
             alt="Plus Icon"
@@ -44,6 +46,26 @@ const Sidebar = ({ isCollapsed }) => {
           <span style={{ background: "transparent" }}>New Note</span>
         </button>
         <span className="ctrlt">Ctrl + T</span>
+      </div>
+
+      <div className="files-list">
+        {files.map((file, index) => (
+          <div key={index} className="file-item">
+            <div className="filename">
+              <img src={fileIcon} style={{ background: "transparent" }} />
+              <span className="file-name" style={{ background: "transparent" }}>
+                {file}
+              </span>
+            </div>
+            <div className="cross">
+              <img
+                src={deleteIcon}
+                alt="delete Icon"
+                style={{ background: "transparent", opacity: 0.5 }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
