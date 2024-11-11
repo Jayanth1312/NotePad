@@ -71,7 +71,43 @@
   transition: opacity 0.3s ease;
 }
 
-.sidebar.collapsed .search-container {
+.new-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 12px 12px 12px;
+  width: 100%;
+  background: transparent;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.new-note-button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #737373;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0;
+  gap: 4px;
+}
+
+.ctrlt {
+  padding: 0px 8px;
+  color: #737373;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+/* Updated collapsed states */
+.sidebar.collapsed .search-container,
+.sidebar.collapsed .new-note {
   opacity: 0;
   visibility: hidden;
   transform: translateX(-20px);
@@ -82,24 +118,30 @@
   transform: translateX(-20px);
 }
 
-.sidebar.collapsed .search-input {
+.sidebar.collapsed .search-input,
+.sidebar.collapsed .shortcut,
+.sidebar.collapsed .ctrlt,
+.sidebar.collapsed .new-note-button span {
   opacity: 0;
 }
 
-.sidebar.collapsed .shortcut {
-  opacity: 0;
-}
-
+/* Transition delays */
 .search-container,
 .search-wrapper,
 .search-input,
-.shortcut {
+.shortcut,
+.new-note,
+.ctrlt,
+.new-note-button span {
   transition-delay: 0.1s;
 }
 
 .sidebar.collapsed .search-container,
 .sidebar.collapsed .search-wrapper,
 .sidebar.collapsed .search-input,
-.sidebar.collapsed .shortcut {
+.sidebar.collapsed .shortcut,
+.sidebar.collapsed .new-note,
+.sidebar.collapsed .ctrlt,
+.sidebar.collapsed .new-note-button span {
   transition-delay: 0s;
 }

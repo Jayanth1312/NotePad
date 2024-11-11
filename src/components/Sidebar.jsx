@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import searchIcon from "../assets/search.svg";
+import plusIcon from "../assets/plus.svg";
 import "./sidebar.css";
 
 const Sidebar = ({ isCollapsed }) => {
@@ -19,7 +20,6 @@ const Sidebar = ({ isCollapsed }) => {
 
   return (
     <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
-
       <div className={`search-container ${isCollapsed ? "hidden" : ""}`}>
         <div className="search-wrapper">
           <img src={searchIcon} alt="Search Icon" />
@@ -32,6 +32,18 @@ const Sidebar = ({ isCollapsed }) => {
           />
           <span className="shortcut">Ctrl + K</span>
         </div>
+      </div>
+
+      <div className="new-note">
+        <button className="new-note-button">
+          <img
+            src={plusIcon}
+            alt="Plus Icon"
+            style={{ background: "transparent" }}
+          />
+          <span style={{ background: "transparent" }}>New Note</span>
+        </button>
+        <span className="ctrlt">Ctrl + T</span>
       </div>
     </div>
   );
