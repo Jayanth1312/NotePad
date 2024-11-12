@@ -16,7 +16,7 @@
 .command-palette {
   width: 500px;
   background-color: #2b2b2b;
-  border-radius: 8px;
+  border-radius: 12px;
   /* box-shadow: 0 4px 12px rgba(187, 187, 187, 0.045); */
   overflow: hidden;
 }

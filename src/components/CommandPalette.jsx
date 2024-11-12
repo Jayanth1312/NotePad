@@ -38,6 +38,23 @@ const CommandPalette = ({ isOpen, onClose, onCreateFile }) => {
     }
   };
 
+  const handleChange = (e) => {
+    const inputValue = e.target.value;
+    const cursorPosition = e.target.selectionStart;
+
+    // Check if the cursor is within the extension
+    const isWithinExtension = cursorPosition > inputValue.length - 4;
+
+    if (isWithinExtension) {
+      // If trying to modify the extension, prevent the change
+      return;
+    }
+
+    // Remove any existing .rtf extensions from the input
+    const cleanedInput = inputValue.replace(/\.rtf/g, "");
+    setFileName(cleanedInput);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -47,9 +64,10 @@ const CommandPalette = ({ isOpen, onClose, onCreateFile }) => {
           ref={inputRef}
           type="text"
           value={`${fileName}.rtf`}
-          onChange={(e) => setFileName(e.target.value.replace(".rtf", ""))}
+          onChange={handleChange}
           onKeyDown={handleKeyDown}
           className="command-palette-input"
+          spellCheck={false}
         />
       </div>
     </div>

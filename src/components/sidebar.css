@@ -20,6 +20,7 @@
 }
 
 .search-container {
+  /* position: fixed; */
   width: 100%;
   background: none;
   padding-top: 24px;
@@ -132,7 +133,7 @@
 .new-note,
 .ctrlt,
 .new-note-button span {
-  transition-delay: 0.1s;
+  transition-delay: 0s;
 }
 
 .sidebar.collapsed .search-container,
@@ -154,8 +155,9 @@
 
 .file-item {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 12px 12px;
+  padding: 10px 12px;
   margin-bottom: 8px;
   background-color: #2b2b2b; /* Change background color when selected */
   cursor: pointer;
@@ -173,7 +175,7 @@
 
 .file-item .cross {
   background: transparent;
-  padding: 0 8px;
+  padding: 6px 8px 0px 8px;
 }
 
 /* .file-item:hover {

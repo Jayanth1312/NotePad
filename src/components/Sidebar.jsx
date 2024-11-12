@@ -57,7 +57,7 @@ const Sidebar = ({ isCollapsed, files, onNewNote }) => {
                 {file}
               </span>
             </div>
-            <div className="cross">
+            <div className="cross" onClick={{}}>
               <img
                 src={deleteIcon}
                 alt="delete Icon"
